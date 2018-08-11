@@ -30,13 +30,16 @@ function appendFile(...text) {
 function printHelp() {
   console.log(`Usage: node index.js [options]
 
-HackYourFuture Node.js Week 2 - Lecture To-Do App
+HackYourFuture Node.js Week 2 -  To-Do App
 
 Options:
 
-  read          read all to-dos
-  write [to-do] add to-do
-  help          show this help text
+  list         read all to-dos
+  add [to-do]  add to-do
+  remove       remove an todo item by its index
+  reset        Removes all to-do items from the list
+  update       Updates a to-do item with new text
+  help         show this help text
   `);
 }
 
