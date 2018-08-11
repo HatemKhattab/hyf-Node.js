@@ -50,7 +50,7 @@ const cmd  = process.argv[2];
 const args = process.argv.slice(3);
 
 switch (cmd) {
-  case 'read':
+  case 'list':
     readFile()
       .then(data => console.log(`To-Dos:\n${data}`));
     break;
