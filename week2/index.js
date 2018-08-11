@@ -55,7 +55,7 @@ switch (cmd) {
       .then(data => console.log(`To-Dos:\n${data}`));
     break;
 
-  case 'write':
+  case 'add':
     appendFile(...args)
       .then(() => console.log('Wrote to-do to file'))
       .then(() => readFile())
