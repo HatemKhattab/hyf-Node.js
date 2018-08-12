@@ -27,6 +27,13 @@ function appendFile(...text) {
   );
 }
 
+function reset(){
+  fs.unlink(STORE_FILE_NAME, function(err){
+    if(err) throw err;
+    console.log('The list is impty');
+  });
+}
+
 function printHelp() {
   console.log(`Usage: node index.js [options]
 
@@ -61,6 +68,10 @@ switch (cmd) {
       .then(() => readFile())
       .then(data => console.log(`\nTo-Dos:\n${data}`))
       .catch(console.error);
+    break;
+
+  case 'reset':
+    reset();
     break;
 
   case 'help':
