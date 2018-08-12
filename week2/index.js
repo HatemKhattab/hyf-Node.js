@@ -30,7 +30,6 @@ function appendFile(...text) {
 function resetList(){
   fs.unlink(STORE_FILE_NAME, function(err){
     if(err) throw err;
-    console.log('The list is impty');
   });
 }
 
@@ -50,6 +49,22 @@ function printHelp() {
       `);
 }
 
+function removeItem(){
+  const INDEX  = process.argv[3];
+  let listText = fs.readFileSync(STORE_FILE_NAME, DEFAULT_ENCODING);
+  let listArray = listText.split("\n");
+
+  if(INDEX>=0 && INDEX<listArray.length) {
+    listArray.splice(INDEX,1);
+    resetList();
+    listArray.forEach((item) => {
+      fs.appendFileSync(STORE_FILE_NAME, item+'\n')
+    });
+  }else {
+    console.log('error !!! .. you have entered fel index');
+  }
+
+}
 /* Or we could destructure the array instead
  * const [,, cmd, ...args] = process.argv;
  */
@@ -68,6 +83,12 @@ switch (cmd) {
       .then(() => readFile())
       .then(data => console.log(`\nTo-Dos:\n${data}`))
       .catch(console.error);
+    break;
+
+  case 'remove':
+    removeItem();
+    readFile()
+      .then(data => console.log(`To-Dos:\n${data}`));
     break;
 
   case 'reset':
