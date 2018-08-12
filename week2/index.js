@@ -27,7 +27,7 @@ function appendFile(...text) {
   );
 }
 
-function reset(){
+function resetList(){
   fs.unlink(STORE_FILE_NAME, function(err){
     if(err) throw err;
     console.log('The list is impty');
@@ -71,7 +71,7 @@ switch (cmd) {
     break;
 
   case 'reset':
-    reset();
+    resetList();
     break;
 
   case 'help':
