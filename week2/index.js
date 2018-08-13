@@ -87,8 +87,7 @@ switch (cmd) {
 
   case 'remove':
     removeItem();
-    readFile()
-      .then(data => console.log(`To-Dos:\n${data}`));
+    readFile().then(data => console.log(`To-Dos:\n${data}`));
     break;
 
   case 'reset':
