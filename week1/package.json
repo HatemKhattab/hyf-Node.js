@@ -2,9 +2,9 @@
   "name": "hyf-node-week-1-homework",
   "version": "2.0.0",
   "description": "HackYourFuture Node.js Week 1 - Homework",
-  "repository": "https://github.com/HackYourFuture/nodejs.git",
+  "repository": "https://github.com/HatemKhattab/hyf-Node.js.git",
   "main": "src/index.js",
-  "author": "George Sapkin",
+  "author": "Hatem Khattb",
   "license": "MIT",
   "scripts": {
     "test": "ava --verbose",
