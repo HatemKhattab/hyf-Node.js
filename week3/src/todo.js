@@ -68,6 +68,11 @@ class Todo {
     return todo;
   }
 
+  delete(){
+    let todos =[];
+    this._save(todos);
+  }
+
   async delete_(id) {
     const todos         = await this.read();
     const filteredTodos = todos.filter(t => t.id !== id);

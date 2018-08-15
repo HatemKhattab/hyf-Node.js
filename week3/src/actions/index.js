@@ -6,5 +6,6 @@ module.exports = {
   readTodos:  require('./readTodos'),
   updateTodo: require('./updateTodo'),
   deleteTodo: require('./deleteTodo'),
-  readTodo: require('./readTodo') 
+  readTodo: require('./readTodo'),
+  deleteTodos: require('./deleteTodos'),
 };
