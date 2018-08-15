@@ -42,6 +42,7 @@ class Todo {
     const todos = await this.read();
 
     const todo = todos.find(t => t.id === id);
+    //TODO: add checking todo as a new function
     if (todo == null) {
       const error = new Error(`To-do with ID ${id} does not exist`);
       error.code = 'not-found';
@@ -52,6 +53,18 @@ class Todo {
 
     await this._save(todos);
 
+    return todo;
+  }
+
+  async findTodo(id){
+    const todos = await this.read();
+
+    const todo = todos.find(t => t.id === id);
+    if (todo == null) {
+      const error = new Error(`To-do with ID ${id} does not exist`);
+      error.code = 'not-found';
+      throw error;
+    }
     return todo;
   }
 
