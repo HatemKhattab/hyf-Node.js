@@ -2,9 +2,9 @@
   "name": "hyf-node-week-2-homework",
   "version": "1.0.0",
   "description": "HackYourFuture Node.js Week 2 - Homework",
-  "repository": "https://github.com/HackYourFuture/nodejs.git",
+  "repository": "https://github.com/HatemKhattab/hyf-Node.js.git",
   "main": "src/index.js",
-  "author": "George Sapkin",
+  "author": "Hatem Khattab",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.2.0",
