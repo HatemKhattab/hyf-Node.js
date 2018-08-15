@@ -2,9 +2,9 @@
   "name": "hyf-node-week-3-todo",
   "version": "1.0.1",
   "description": "HackYourFuture Node.js Week 3 - To-Do App",
-  "repository": "https://github.com/HackYourFuture/nodejs.git",
+  "repository": "https://github.com/HatemKhattab/hyf-Node.js.git",
   "main": "src/index.js",
-  "author": "George Sapkin",
+  "author": "Hatem Khattab",
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",
