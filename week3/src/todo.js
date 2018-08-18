@@ -79,6 +79,17 @@ class Todo {
     this._save(todos);
   }
 
+  async markAsNotDone(id){
+    const todos = await this.read();
+    console.log(todos);
+    todos.forEach(function(item){
+      if(item.id == id){
+        item.done = false;
+      }
+    });
+    this._save(todos);
+  }
+
   delete(){
     let todos =[];
     this._save(todos);
