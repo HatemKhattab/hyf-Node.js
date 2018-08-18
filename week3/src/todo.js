@@ -68,6 +68,17 @@ class Todo {
     return todo;
   }
 
+  async markAsDone(id){
+    const todos = await this.read();
+    console.log(todos);
+    todos.forEach(function(item){
+      if(item.id == id){
+        item.done = true;
+      }
+    });
+    this._save(todos);
+  }
+
   delete(){
     let todos =[];
     this._save(todos);
